@@ -1,0 +1,11 @@
+# Permissioning
+permission:
+  # Only config or custom permissionHandler at the moment
+  path: ./src/custom-permission-handler.js
+  options:
+    # Path to the permissionFile. Can be json, js or yml
+    path: ./permissions.yml
+    # Amount of times nested cross-references will be loaded. Avoids endless loops
+    maxRuleIterations: 3
+    # PermissionResults are cached to increase performance. Lower number means more loading
+    cacheEvacuationInterval: 60000
